@@ -1,0 +1,445 @@
+@charset "UTF-8";
+
+#Projects {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: #f5f5f5;
+    background-color: #232323;
+    box-sizing: border-box;
+    padding: 7.5rem 1.5rem 4.5rem 1.5rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+#Projects > .title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#Projects > .project-container {
+    width: 70.5rem;
+    height: 27rem;
+    box-sizing: border-box;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+#Projects > .project-container > .large.project,
+#Projects > .project-container > .small.project > .item {
+    width: 100%;
+    height: 100%;
+    color: #f5f5f5;
+    background-color: #3D3D3D;
+    border: 0.0625rem solid #666666;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    position: relative;
+
+    transition-duration: 250ms;
+    transition-property: transform;
+    transition-timing-function: ease;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#Projects > .project-container > .large.project:hover,
+#Projects > .project-container > .small.project > .item:hover{
+    transform: translateY(-8px);
+}
+
+#Projects > .project-container > .large.project > .cover {
+    width: 100%;
+    height: 60%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+#Projects > .project-container > .large.project > .info > .title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.2rem 0 0.75rem 1.2rem;
+}
+
+#Projects > .project-container > .large.project > .info > .caption {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0 1.2rem;
+}
+
+#Projects > .project-container > .large.project > .meta {
+    margin-top: 2.875rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0 1.2rem;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Projects > .project-container > .large.project > .meta > .caption {
+    width: auto;
+    color: #f5f5f5;
+    background-color: #232323;
+    border-radius: 0.3rem;
+    text-align: center;
+    padding: 0.35rem 0.975rem;
+}
+
+#Projects > .project-container > .large.project > .moreInfo {
+    width: 100%;
+    height: 100%;
+    color: #f5f5f5;
+    background-color: #3D3D3D;
+    border: 0.0625rem solid #666666;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    opacity: 0;
+    padding: 1.25rem;
+    position: absolute;
+    z-index: 1;
+
+    transition-duration: 250ms;
+    transition-property: opacity, box-shadow;
+    transition-timing-function: ease;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+#Projects > .project-container > .large.project:hover > .moreInfo {
+    opacity: 0.985;
+    box-shadow: 0 0 0.875rem #666666;
+}
+
+#Projects > .project-container > .large.project > .moreInfo > .button > .btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0.0625rem solid #f5f5f5;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.35rem #a6a6a6;
+    box-sizing: border-box;
+    padding: 0.85rem 12rem;
+}
+
+#Projects > .project-container > .large.project > .moreInfo > .button > .btn:hover {
+    color: #232323;
+    background: #f5f5f5;
+    opacity: 0.985;
+}
+
+#Projects > .project-container > .large.project > .moreInfo > .button > .btn:active {
+    filter: brightness(85%);
+}
+
+/* large : small 원본 비율값: 0.6875 -> 너무 작아서 크기 조정 비율값: 1.538 */
+/* large -> small : large 값 / 1.538  */
+/* weight 값은 동일하게 줌 */
+
+#Projects > .project-container > .small.project {
+    width: 26.5rem;
+    height: 27rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+#Projects > .project-container > .small.project > .item > .cover {
+    width: 100%;
+    height: 7.35rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+#Projects > .project-container > .small.project > .item > .info > .title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.78rem 0 0.0625rem 0.78rem;
+}
+
+#Projects > .project-container > .small.project > .item > .info > .caption {
+    font-size: 0.65rem;
+    font-weight: 400;
+    padding: 0 0.78rem;
+}
+
+#Projects > .project-container > .small.project > .item > .meta {
+    margin-top: 0.93rem;
+    font-size: 0.55rem;
+    font-weight: 400;
+    padding: 0 0.78rem;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 0.32rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Projects > .project-container > .small.project > .item > .meta > .caption {
+    width: auto;
+    color: #f5f5f5;
+    background-color: #232323;
+    border-radius: 0.2rem;
+    text-align: center;
+    padding: 0.23rem 0.635rem;
+}
+
+#Projects > .project-container > .small.project > .item > .moreInfo {
+    width: 100%;
+    height: 100%;
+    color: #f5f5f5;
+    background-color: #3D3D3D;
+    border: 0.0625rem solid #666666;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3rem;
+    opacity: 0;
+    padding: 0.8127rem;
+    position: absolute;
+    z-index: 1;
+
+    transition-duration: 250ms;
+    transition-property: opacity, box-shadow;
+    transition-timing-function: ease;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
+    justify-content: center;
+}
+
+#Projects > .project-container > .small.project > .item:hover  > .moreInfo {
+    opacity: 0.985;
+    box-shadow: 0 0 0.875rem #666666;
+}
+
+#Projects > .project-container > .small.project > .item  > .moreInfo > .button > .btn {
+    font-size: 0.975rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0.0625rem solid #f5f5f5;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.35rem #a6a6a6;
+    box-sizing: border-box;
+    padding: 0.55rem 5rem;
+}
+
+#Projects > .project-container > .small.project > .item  > .moreInfo > .button > .btn:hover {
+    color: #232323;
+    background: #f5f5f5;
+    opacity: 0.985;
+}
+
+#Projects > .project-container > .small.project > .item  > .moreInfo > .button > .btn:active {
+    filter: brightness(85%);
+}
+
+
+
+@media (max-width: 480px) {
+    #Projects {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+
+    #Projects > .title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #Projects > .project-container {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    #Projects > .project-container > .large.project:hover,
+    #Projects > .project-container > .small.project > .item:hover {
+        transform: translateY(-4px);
+        position: relative;
+        z-index: 10;
+    }
+
+    #Projects > .project-container > .large.project,
+    #Projects > .project-container > .small.project > .item {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+
+    #Projects > .project-container > .large.project > .cover,
+    #Projects > .project-container > .small.project > .item > .cover {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+    }
+
+    #Projects > .project-container > .large.project > .info > .title {
+        font-size: 1.5rem;
+    }
+
+    #Projects > .project-container > .large.project > .info > .caption {
+        font-size: 0.9rem;
+    }
+
+    #Projects > .project-container > .large.project > .meta {
+        font-size: 0.75rem;
+        flex-direction: column;
+    }
+
+    #Projects > .project-container > .small.project {
+        width: 100%;
+    }
+
+    #Projects > .project-container > .small.project > .item > .cover {
+        width: 100%;
+        height: 7rem;
+    }
+
+    #Projects > .project-container > .small.project > .item > .info > .title {
+        font-size: 1.1rem;
+    }
+
+    #Projects > .project-container > .small.project > .item > .info > .caption {
+        font-size: 0.6rem;
+    }
+
+    #Projects > .project-container > .small.project > .item > .meta {
+        font-size: 0.5rem;
+    }
+
+    #Projects > .project-container > .large.project > .moreInfo,
+    #Projects > .project-container > .small.project > .item > .moreInfo {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    #Projects > .project-container > .large.project > .moreInfo > .button > .btn,
+    #Projects > .project-container > .small.project > .item > .moreInfo > .button > .btn {
+        font-size: 1rem;
+        padding: 0.75rem 4rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #Projects {
+        padding: 3rem 1rem 2rem 1rem; /* 전체 padding 줄임 */
+    }
+
+    #Projects > .title {
+        font-size: 1.8rem; /* 타이틀 크기 조정 */
+        margin-bottom: 1.5rem;
+    }
+
+    #Projects > .project-container {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 10px; /* 간격 줄임 */
+    }
+
+    /* 호버 시 위로 뜨게 수정 */
+    #Projects > .project-container > .large.project:hover,
+    #Projects > .project-container > .small.project > .item:hover {
+        transform: translateY(-4px); /* 위로 뜨게 수정 */
+    }
+
+    #Projects > .project-container > .large.project,
+    #Projects > .project-container > .small.project > .item {
+        width: 95%; /* 너비 줄임 */
+        height: auto;
+        padding: 0.75rem; /* padding 줄임 */
+        border-radius: 0.25rem;
+    }
+
+    #Projects > .project-container > .large.project > .cover,
+    #Projects > .project-container > .small.project > .item > .cover {
+        width: 100%;
+        height: 35%; /* 커버 높이 줄임 */
+        object-fit: cover;
+    }
+
+    #Projects > .project-container > .large.project > .info > .title {
+        font-size: 1.3rem; /* 제목 크기 줄임 */
+    }
+
+    #Projects > .project-container > .large.project > .info > .caption {
+        font-size: 0.8rem; /* 캡션 크기 줄임 */
+    }
+
+    #Projects > .project-container > .large.project > .meta {
+        font-size: 0.7rem; /* 메타 정보 크기 줄임 */
+        flex-direction: column;
+    }
+
+    #Projects > .project-container > .small.project {
+        width: 100%;
+    }
+
+    #Projects > .project-container > .small.project > .item > .cover {
+        width: 100%;
+        height: 6rem; /* 커버 높이 줄임 */
+    }
+
+    #Projects > .project-container > .small.project > .item > .info > .title {
+        font-size: 1rem; /* 제목 크기 줄임 */
+    }
+
+    #Projects > .project-container > .small.project > .item > .info > .caption {
+        font-size: 0.55rem; /* 캡션 크기 줄임 */
+    }
+
+    #Projects > .project-container > .small.project > .item > .meta {
+        font-size: 0.45rem; /* 메타 정보 크기 줄임 */
+    }
+
+    #Projects > .project-container > .large.project > .moreInfo,
+    #Projects > .project-container > .small.project > .item > .moreInfo {
+        font-size: 1rem; /* 더보기 버튼 크기 줄임 */
+        padding: 0.75rem;
+    }
+
+    #Projects > .project-container > .large.project > .moreInfo > .button > .btn,
+    #Projects > .project-container > .small.project > .item > .moreInfo > .button > .btn {
+        font-size: 0.9rem; /* 버튼 폰트 크기 줄임 */
+        padding: 0.5rem 3rem; /* 버튼 padding 줄임 */
+    }
+}

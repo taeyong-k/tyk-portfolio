@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@import "./index/topAnchor.css";
+@import "./index/AboutMe.css";
+@import "./index/Certification.css";
+@import "./index/Skills.css";
+@import "./index/Projects.css";
+@import "./index/ProjectsForm.css";
+@import "./index/Career.css";
+@import "./index/copyright.css";
+
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}

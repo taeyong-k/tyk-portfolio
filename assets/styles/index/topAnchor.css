@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+#topAnchor {
+    right: 1.5rem;
+    bottom: 1.2rem;
+    width: 2.188rem;
+    height: 2.188rem;
+    font-size: 0.92rem;
+    backdrop-filter: blur(1rem);
+    background-color: #F8FAFC;
+    border: 0.0625rem solid #ccc;
+    border-radius: 999rem;
+    box-shadow: 0 0 0.225rem #A0A3A8;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition-duration: 250ms;
+    transition-property: bottom, background-color, opacity;
+    transition-timing-function: ease;
+    z-index: 1;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#topAnchor:hover {
+    background-color: #FFD94D;
+}
+
+#topAnchor:active {
+    filter: brightness(90%);
+}
+
+#topAnchor.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#topAnchor > .up-chevron {
+    width: 2.188rem;
+    height: 2.188rem;
+    cursor: pointer;
+    filter: opacity(0.75);
+    transition-duration: 250ms;
+    transition-property: filter;
+    transition-timing-function: ease;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#topAnchor:hover > .up-chevron {
+    filter: opacity(1);
+}
+
+#topAnchor > .up-chevron > .icon {
+    width: 0.9rem;
+    stroke: #232323;  /* 선 색상 */
+    stroke-width: 60;  /* 선 굵기 */
+}
+
+
+
+@media (max-width: 480px) {
+    #topAnchor {
+        right: 1rem;
+        bottom: 1rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    #topAnchor > .up-chevron {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #topAnchor > .up-chevron > .icon {
+        width: 0.8rem;
+    }
+}

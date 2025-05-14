@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+:root {
+    --scrollbar-width: 0px; /* 기본값 설정 (브라우저에서 스크롤바 너비를 가져오기 전까지는 0으로 설정) */
+}
+
+/* scroll hidden */
+body.overflow-hidden {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+}
+
+#ProjectsForm {
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    font-family: inherit;
+    padding: 2.5rem 14rem 2.5rem 14rem;
+    position: fixed;
+    overflow-y: auto;
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+
+    transform: translate(0, 0) scale(0);
+    transition-duration: 250ms;
+    transition-property: transform, opacity, visibility;
+    transition-timing-function: ease-out;
+
+}
+
+#ProjectsForm.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, 0) scale(1);
+    visibility: visible;
+    transition-property: transform, opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+}
+
+#ProjectsForm > .projectPage {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.225rem #A0A3A8;
+    display: block;
+    position: relative;
+}
+
+#ProjectsForm > .projectPage > .closeBtn {
+    right: 8rem;
+    top: 2.5rem;
+    width: 2.188rem;
+    height: 2.188rem;
+    font-size: 0.92rem;
+    backdrop-filter: blur(1rem);
+    background-color: #F8FAFC;
+    border: 0.0625rem solid #ccc;
+    border-radius: 999rem;
+    box-shadow: 0 0 0.225rem #A0A3A8;
+    position: fixed;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    z-index: 20;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ProjectsForm > .projectPage > .closeBtn:hover {
+    background-color: #FFD94D;
+}
+
+#ProjectsForm > .projectPage > .closeBtn:active {
+    filter: brightness(90%);
+}
+
+#ProjectsForm > .projectPage > .closeBtn > .button {
+    width: 2.188rem;
+    height: 2.188rem;
+    cursor: pointer;
+    filter: opacity(0.75);
+    transition-duration: 250ms;
+    transition-property: filter;
+    transition-timing-function: ease;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ProjectsForm > .projectPage > .closeBtn:hover > .button {
+    filter: opacity(1);
+}
+
+#ProjectsForm > .projectPage > .closeBtn > .button > .icon {
+    width: 0.9rem;
+    stroke: #232323;
+    stroke-width: 60;
+}
+
+#ProjectsForm > .projectPage > .header {
+    color: #3C3D37;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem 2.5rem 0 2.5rem;
+    position: relative;
+    z-index: 2;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ProjectsForm > .projectPage > .header::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #FFD94D;
+    border-radius: 0.5rem 0.5rem 0 0;
+    filter: opacity(0.75);
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+#ProjectsForm > .projectPage > .header > .meta {
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#ProjectsForm > .projectPage > .header > .meta > .caption {
+    width: auto;
+    color: #f5f5f5;
+    background-color: #232323;
+    border-radius: 0.3rem;
+    text-align: center;
+    padding: 0.35rem 0.975rem;
+}
+
+#ProjectsForm > .projectPage > .header > .title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    padding: 0.7rem 0 0.5rem 0;
+}
+
+
+#ProjectsForm > .projectPage > .header > .date {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 1.35rem;
+}
+
+#ProjectsForm > .projectPage > .header > .img {
+    width: 40vw;
+    background-color: #F8FAFC;
+    border-radius: 2.125rem;
+    border: 0.0625rem solid #666666;
+    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    padding: 0.75rem;
+}
+
+#ProjectsForm > .projectPage > .header > .img > .icon {
+    width: 100%;
+    height: auto;
+    border-radius: 2.125rem;
+    box-sizing: border-box;
+    display: block;
+}
+
+
+#ProjectsForm > .projectPage > .body {
+    color: #3C3D37;
+    background-color: #f5f5f5;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 18% 2.5rem 18%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+#ProjectsForm > .projectPage > .body > .overview {
+    border-bottom: 0.0625rem solid #ccc;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    white-space: pre-wrap;
+}
+
+#ProjectsForm > .projectPage > .body > .mainInfo,
+#ProjectsForm > .projectPage > .body > .techStack,
+#ProjectsForm > .projectPage > .body > .troubleShooting {
+    font-family: inherit;
+    font-size: 1.025rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+#ProjectsForm > .projectPage > .body > .mainInfo > .title,
+#ProjectsForm > .projectPage > .body > .techStack > .title,
+#ProjectsForm > .projectPage > .body > .troubleShooting > .title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0 0.5rem 0;
+}
+
+#ProjectsForm > .projectPage > .body > .mainInfo > .content li,
+#ProjectsForm > .projectPage > .body > .techStack > .content li,
+#ProjectsForm > .projectPage > .body > .troubleShooting > .issue > .content li {
+    margin-bottom: 0.25rem;
+}
+
+#ProjectsForm > .projectPage > .body > .troubleShooting > .issue > .title {
+    margin-top: 1.25rem;
+    margin-bottom: -0.0625rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 480px) {
+    #ProjectsForm {
+        padding: 1.5rem 3rem;
+    }
+
+    #ProjectsForm > .projectPage {
+        width: 100%;
+        min-height: auto;
+        margin: 0 1rem;
+    }
+
+    #ProjectsForm > .projectPage > .closeBtn {
+        right: 2rem;
+        top: 1.5rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.8rem;
+    }
+
+    #ProjectsForm > .projectPage > .closeBtn > .button {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.8rem;
+    }
+
+    #ProjectsForm > .projectPage > .header {
+        padding: 0.8rem 1.5rem;
+    }
+
+    #ProjectsForm > .projectPage > .header > .title {
+        font-size: 1.8rem;
+    }
+
+    #ProjectsForm > .projectPage > .header > .date {
+        font-size: 0.85rem;
+        padding-bottom: 1rem;
+    }
+
+    #ProjectsForm > .projectPage > .header > .img {
+        width: 60vw;
+        padding: 0.5rem;
+    }
+
+    #ProjectsForm > .projectPage > .body {
+        padding: 0 10% 1rem 10%;
+    }
+
+    #ProjectsForm > .projectPage > .body > .overview {
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    #ProjectsForm > .projectPage > .body > .mainInfo,
+    #ProjectsForm > .projectPage > .body > .techStack,
+    #ProjectsForm > .projectPage > .body > .troubleShooting {
+        font-size: 1rem;
+    }
+
+    #ProjectsForm > .projectPage > .body > .mainInfo > .title,
+    #ProjectsForm > .projectPage > .body > .techStack > .title,
+    #ProjectsForm > .projectPage > .body > .troubleShooting > .title {
+        font-size: 1.4rem;
+    }
+
+    #ProjectsForm > .projectPage > .body > .mainInfo > .content li,
+    #ProjectsForm > .projectPage > .body > .techStack > .content li,
+    #ProjectsForm > .projectPage > .body > .troubleShooting > .issue > .content li {
+        margin-bottom: 0.15rem;
+    }
+
+    #ProjectsForm > .projectPage > .body > .troubleShooting > .issue > .title {
+        font-size: 1.1rem;
+    }
+}

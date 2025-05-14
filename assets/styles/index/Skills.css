@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+#Skills {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: #f5f5f5;
+    background-color: #232323;
+    box-sizing: border-box;
+    padding: 7.5rem 1.5rem 4.5rem 1.5rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+#Skills > .title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#Skills > .tech {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#Skills > .tech > .frontend,
+#Skills > .tech > .backend,
+#Skills > .tech > .tools {      /* 테두리 값 */
+    width: 62.8rem;             /* 5개기준 */
+    padding: 1.5rem;
+    border: 0.0625rem solid #f5f5f5;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#Skills > .tech > .frontend > .info,
+#Skills > .tech > .backend > .info,
+#Skills > .tech > .tools > .info {
+    width: 20rem;
+}
+
+#Skills > .tech > .frontend > .info > .title,
+#Skills > .tech > .backend > .info > .title,
+#Skills > .tech > .tools > .info > .title {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+    justify-content: flex-start;
+}
+
+#Skills > .tech > .frontend > .info > .title > .icon,
+#Skills > .tech > .backend > .info > .title > .icon,
+#Skills > .tech > .tools > .info > .title > .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+#Skills > .tech > .frontend > .content,
+#Skills > .tech > .backend > .content,
+#Skills > .tech > .tools > .content {
+    width: auto;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+#Skills > .tech > .frontend > .content > .skillList,
+#Skills > .tech > .backend > .content > .skillList,
+#Skills > .tech > .tools > .content > .skillList{ /* 4개 기준 */
+    width: 39.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+#Skills > .tech > .frontend > .content > .skillList > .skill,
+#Skills > .tech > .backend > .content > .skillList > .skill,
+#Skills > .tech > .tools > .content > .skillList > .skill {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Skills > .tech > .frontend > .content > .skillList > .skill > .icon,
+#Skills > .tech > .backend > .content > .skillList > .skill > .icon,
+#Skills > .tech > .tools > .content > .skillList > .skill > .icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    object-fit: contain;
+}
+
+#Skills > .tech > .frontend > .content > .skillList > .skill > .name,
+#Skills > .tech > .backend > .content > .skillList > .skill > .name,
+#Skills > .tech > .tools > .content > .skillList > .skill > .name {
+    margin: 0.5rem 0 0;
+    color: #232323;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 480px) {
+    #Skills {
+        padding: 4rem 1rem 3rem 1rem;
+    }
+
+    #Skills > .title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #Skills > .tech {
+        gap: 2rem;
+    }
+
+    #Skills > .tech > .frontend,
+    #Skills > .tech > .backend,
+    #Skills > .tech > .tools {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #Skills > .tech > .frontend > .info,
+    #Skills > .tech > .backend > .info,
+    #Skills > .tech > .tools > .info {
+        width: 100%;
+    }
+
+    #Skills > .tech > .frontend > .info > .title,
+    #Skills > .tech > .backend > .info > .title,
+    #Skills > .tech > .tools > .info > .title {
+        font-size: 1.2rem;
+    }
+
+    #Skills > .tech > .frontend > .info > .title > .icon,
+    #Skills > .tech > .backend > .info > .title > .icon,
+    #Skills > .tech > .tools > .info > .title > .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        object-fit: cover;
+    }
+
+    #Skills > .tech > .frontend > .content > .skillList,
+    #Skills > .tech > .backend > .content > .skillList,
+    #Skills > .tech > .tools > .content > .skillList {
+        width: 100%;
+    }
+
+    #Skills > .tech > .frontend > .content > .skillList > .skill,
+    #Skills > .tech > .backend > .content > .skillList > .skill,
+    #Skills > .tech > .tools > .content > .skillList > .skill {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    #Skills > .tech > .frontend > .content > .skillList > .skill > .icon,
+    #Skills > .tech > .backend > .content > .skillList > .skill > .icon,
+    #Skills > .tech > .tools > .content > .skillList > .skill > .icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    #Skills > .tech > .frontend > .content > .skillList > .skill > .name,
+    #Skills > .tech > .backend > .content > .skillList > .skill > .name,
+    #Skills > .tech > .tools > .content > .skillList > .skill > .name {
+        font-size: 0.75rem;
+    }
+}
